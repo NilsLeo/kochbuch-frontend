@@ -34,7 +34,7 @@ export default {
     }
   },
   mounted () {
-    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/recipes'
+    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/Recipes'
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
