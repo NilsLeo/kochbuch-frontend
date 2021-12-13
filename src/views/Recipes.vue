@@ -15,7 +15,7 @@
       <a href="Recipes/EditRecipe" class="card-link">Edit</a>
       <a href="Recipes/ViewRecipe" class="card-link">View</a>
       <p class="text-center"></p>
-      <button type="button" class="btn btn-danger">Delete</button>
+      <button type="button" href="/Recipes"  action="/Recipes" method="DELETE" class="btn btn-danger">Delete</button>
     </div>
   </div>
   </div>
@@ -46,6 +46,7 @@ export default {
       }))
       .catch(error => console.log('error', error))
   }
+
 }
 </script>
 

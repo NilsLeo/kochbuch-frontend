@@ -7,8 +7,8 @@
           <div class="container">
             <div class="row clearfix">
               <div class>
-                  <div class="form-group">
-                    <label for="formGroupNameInput">Name</label>
+                <div class="form-group">
+                    <label for="formGroupNameInput">Name </label>
                     <p class="text-center"></p>
                     <input type="text" class="form-control" id="formGroupNameInput" placeholder="Name">
                   </div>
@@ -31,7 +31,7 @@
                     <textarea class="form-control" id="exampleFormControlDescription" rows="3"></textarea>
                   </div>
                 <p class="text-center"></p>
-                <a href="/Recipes" class="btn btn-primary" role="button">Save</a>
+                <a href="/Recipes" action="/Recipes" method="POST" class="btn btn-primary" role="button">Save</a>
           </div>
             </div>
           </div>
@@ -42,7 +42,35 @@
 </template>
 <script>
 export default {
-  name: 'Add Recipe'
+  name: 'Add Recipe',
+  data () {
+    return {
+      recipes: []
+    }
+  },
+  created () {
+    // Simple POST request with a JSON body using fetch
+    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/Recipes'
+    const myHeaders = new Headers()
+    myHeaders.append('Content-Type', 'application/json')
+
+    const raw = JSON.stringify({
+      recipeName: 'asdfd'
+    })
+
+    const requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw,
+      redirect: 'follow'
+    }
+
+    fetch(endpoint, requestOptions)
+      .then(result => result.forEach(recipe => {
+        this.recipes.push(recipe)
+      }))
+      .catch(error => console.log('error', error))
+  }
 }
 </script>
 
