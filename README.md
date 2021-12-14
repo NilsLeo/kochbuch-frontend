@@ -1,3 +1,5 @@
+[![CI](https://github.com/OskarRabe/kochbuch-frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/OskarRabe/kochbuch-frontend/actions/workflows/ci.yml)
+
 # kochbuch-frontend
 
 ## Project setup
