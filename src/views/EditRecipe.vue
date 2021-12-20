@@ -17,11 +17,22 @@
                   <p class="text-center"></p>
                   <input type="text" class="form-control" id="formGroupDurationInput" placeholder="Duration">
                 </div>
-                <p class="text-center"></p>
-                <div class="form-group">
-                  <label for="formGroupIngredientsInput">Ingredients</label>
-                  <p class="text-center"></p>
-                  <input type="text" class="form-control" id="formGroupIngredientsInput" placeholder="Ingredients">
+                <p class="text-center"> Ingredients</p>
+                <div class="input-group">
+                  <input type="text" class="form-control input-sm" placeholder="Amount" />
+                  <span class="input-group-btn" style="width:10px;"></span>
+                  <select class="form-select" aria-label="Default select example" style="margin-left:-1px">
+                    <option selected>Unknown</option>
+                    <option value="1">Kg</option>
+                    <option value="2">g</option>
+                    <option value="3">L</option>
+                    <option value="4">ml</option>
+                    <option value="5">Stück</option>
+                  </select>
+                  <span class="input-group-btn" style="width:10px;"></span>
+                  <input type="text" class="form-control input-sm" placeholder="Ingredient" style="margin-left:-2px" />
+                  <span class="input-group-btn" style="width:10px;"></span>
+                  <a class="btn btn-light" role="button">+</a>
                 </div>
                 <p class="text-center"></p>
                 <div class="form-group">
