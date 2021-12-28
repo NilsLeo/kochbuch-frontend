@@ -16,8 +16,7 @@
                 <a href="Recipes/EditRecipe" RecipeId="recipe.id" class="card-link">Edit</a>
                 <a href="Recipes/ViewRecipe" RecipeId="recipe.id" class="card-link">View</a>
                 <p class="text-center"></p>
-                <button type="button" @click="deleteRecipe(recipe.id)" class="btn btn-danger" href="Recipes">Delete
-                </button>
+                <button type="button" @click="deleteRecipe(recipe.id)" class="btn btn-danger" href="Recipes">Delete</button>
               </div>
             </div>
           </div>
@@ -30,7 +29,12 @@
 <script>
 export default {
   name: 'Recipes',
-  props: ['RecipeId'],
+  props: {
+    recipeid: Number,
+    recipeName: String,
+    recipeDescription: String,
+    recipeDuration: Number
+  },
   data () {
     return {
       recipes: []
@@ -38,7 +42,6 @@ export default {
   },
   methods: {
     deleteRecipe (id) {
-      console.log('aaaa' + id)
       const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/Recipes/' + id
       const requestOptions = {
         method: 'DELETE',
@@ -50,7 +53,6 @@ export default {
         .then(result => console.log(result))
         .catch(error => console.log('error', error))
       window.location.reload()
-      // alert('Recipes deleted')
     }
   },
   mounted () {
