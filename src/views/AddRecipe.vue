@@ -42,7 +42,7 @@
                     <textarea  v-model="recipeDescription" class="form-control" id="exampleFormControlDescription" rows="3"></textarea>
                   </div>
                 <p class="text-center"></p>
-                <a class="btn btn-primary" role="button" href="/recipes" @click="saveRecipe">Save</a>
+                <a class="btn btn-primary" role="button" href="/ViewRecipes" @click="saveRecipe">Save</a>
           </div>
             </div>
           </div>

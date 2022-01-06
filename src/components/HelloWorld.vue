@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <a href="Recipes" class="btn btn-primary" role="button">My Recipes</a>
+    <a href="ViewRecipes" class="btn btn-primary" role="button">My Recipes</a>
   </div>
 </template>
 
