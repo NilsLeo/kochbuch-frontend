@@ -26,7 +26,7 @@
                   <span class="input-group-btn" style="width:10px;"></span>
                   <select v-model="ingredient.unit" class="form-select" aria-label="Unit" style="margin-left:-1px">
                     <option selected>Unknown</option>
-                    <option value="KG">Kg</option>
+                    <option value="Kg">Kg</option>
                     <option value="g">g</option>
                     <option value="L">L</option>
                     <option value="ml">ml</option>
