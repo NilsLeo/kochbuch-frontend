@@ -49,6 +49,7 @@
                   </div>
                   <span class="input-group-btn" style="width:10px;"></span>
                   <button class="btn btn-primary" type="button" @click="addNewIngredients">+</button>
+                  <button class="btn btn-danger" type="button" @click="removeIngredients">-</button>
                 </div>
                 <p class="text-center"></p>
                   <div class="form-group">
@@ -99,6 +100,11 @@ export default {
         amount: 0,
         unit: ''
       })
+    },
+    removeIngredients () {
+      if (this.ingredients.length > 1) {
+        this.ingredients.length = this.ingredients.length - 1
+      }
     },
     validate () {
       const form = document.getElementById('recipeForm')
