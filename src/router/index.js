@@ -3,7 +3,6 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import ViewRecipes from '../views/ViewRecipes'
 import AddRecipe from '../views/AddRecipe'
-import ViewRecipe from '@/views/ViewRecipe'
 
 const routes = [
   {
@@ -25,11 +24,6 @@ const routes = [
     path: '/recipes/addrecipe',
     name: 'AddRecipe',
     component: AddRecipe
-  },
-  {
-    path: '/recipes/viewrecipe',
-    name: 'ViewRecipe',
-    component: ViewRecipe
   }
 ]
 
