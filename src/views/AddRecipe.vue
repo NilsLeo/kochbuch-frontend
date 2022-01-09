@@ -161,7 +161,7 @@ export default {
     },
     async handleResponse (response) {
       if (response.ok) {
-        window.location.href = '/Home'
+        window.location.href = '/'
       } else if (response.status === 400) {
         response = await response.json()
         response.errors.forEach(error => {
