@@ -17,8 +17,7 @@ export default {
   },
   props: {
     recipes: {
-      type: Array,
-      required: true
+      type: Array
     }
   }
 }

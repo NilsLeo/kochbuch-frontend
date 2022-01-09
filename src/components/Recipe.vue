@@ -20,8 +20,7 @@ export default {
   emits: ['delete'],
   props: {
     recipe: {
-      type: Object,
-      required: true
+      type: Object
     }
   }
 }
